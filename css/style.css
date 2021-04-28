@@ -1,0 +1,223 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+/*menu style*/
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+
+header .navigation {
+  position: relative;
+  display: flex;
+}
+
+header .navigation li {
+  list-style: none;
+  margin-left: 30px;
+}
+
+header .navigation li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+
+header img {
+  top: 0;
+  margin: 0;
+  padding: 0;
+  height: 55px;
+}
+/*fim do menu*/
+section {
+  top: 0;
+  margin: 0;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/bg.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.banner .content {
+  max-width: 900px;
+  text-align: center;
+}
+
+.banner .content h2 {
+  font-size: 5em;
+  color: #fff;
+}
+
+.banner .content p {
+  font-size: 1em;
+  color: #fff;
+}
+/*mapa*/
+.bannermap {
+  align-items: center;
+  padding: 50px 50px;
+}
+
+.mapa {
+  height: 50px;
+}
+
+section svg {
+  position: relative;
+  padding: 10px 10px;
+  width: 612px;
+  height: 690px;
+}
+
+svg path.active {
+  fill: #006284;
+  transition: fill 0.6s;
+  cursor: pointer;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+svg path.active:before {
+  fill: #006284;
+  transition: fill 0.6s;
+  cursor: pointer;
+  stroke: rgb(185, 151, 151);
+  stroke-width: 2px;
+  transition: all 0.2s ease;
+}
+
+svg path {
+  fill: #007eff;
+  stroke: black;
+  width: 50px;
+  font-size: 2em;
+  font-weight: 700;
+}
+
+svg path:hover {
+  fill: #006284;
+  transition: fill 0.6s;
+  cursor: pointer;
+  stroke: #fff;
+  stroke-width: 2px;
+}
+
+.dados {
+  height: 400px;
+  align-items: center;
+  text-align: center;
+  margin-left: 650px;
+}
+
+.container {
+  padding: 10px 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.pvc {
+  height: 500px;
+  padding: 20px 20px;
+  text-align: center;
+  place-items: center;
+  display: grid;
+}
+
+.pvc p {
+  position: relative;
+}
+
+.dados .container .circular {
+  height: 100px;
+  width: 100px;
+
+  position: relative;
+  transform: scale(2);
+}
+
+.dados .container .pvc .circular .inner {
+  position: absolute;
+  z-index: 6;
+  top: 50px;
+  left: 50px;
+  height: 80px;
+  width: 80px;
+  margin: -40px 0 0 -40px;
+  background: #fff;
+  border-radius: 100%;
+}
+.dados .container .circular .num {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 18px;
+  font-weight: 500;
+  color: #006284;
+}
+.dados .container .circular .bar {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 100px, 100px, 50px);
+}
+
+.dados .container .circle .bar .progress {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  -webkit-border-radius: 100%;
+  clip: rect(0px, 50px, 100px, 0px);
+  background: #006284;
+}
+
+.dados .container .circle .left .progress {
+  z-index: 3;
+  animation: left 3s linear both;
+}
+
+@keyframes left {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+.dados .container .circle .right {
+  z-index: 3;
+}
+
+.dados .container .circle .right .progress {
+  animation: right 3s linear both;
+  animation-delay: 3s;
+}
+
+@keyframes right {
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+
